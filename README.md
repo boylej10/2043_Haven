@@ -1,16 +1,6 @@
-# A Blank PhoneGap App
+# GIT Repository for my 2043 Transmedia PhoneGap Appp
 
-## Usage
-
-### PhoneGap CLI
-
-    $ phonegap create my-app --template blank
-
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
+## BoyleJ10
 
 # 2043_Haven
 # 2043_Haven
