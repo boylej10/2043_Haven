@@ -1,6 +1,5 @@
-# GIT Repository for my 2043 Transmedia PhoneGap Appp
+# GIT Repository for my 2043 Transmedia PhoneGap App and Skeleton Website
 
-## BoyleJ10
 
-# 2043_Haven
-# 2043_Haven
+2043_Haven
+2043_Haven
