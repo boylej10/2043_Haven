@@ -29,10 +29,24 @@
 }
 .vertical-align{
     position: relative;
-    top: 25%;
+    top: 25% !important;
     -webkit-transform: translateY(-25%);
     -ms-transform: translateY(-25%);
     transform: translateY(-25%);
     font-size: 40px;
     color: #333333;
+}
+.buttonback {
+   
+    color: white;
+    background-color: black;
+    height: auto;
+    width: auto;
+    box-shadow:         inset 0 0 25px #888888;
+    
+
+}
+.buttonback a {
+
+    color: white;
 }
