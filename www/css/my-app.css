@@ -20,6 +20,15 @@
 
     
 }
+
+.provide {
+    text-align: center;
+    background-color: #7C92E2;
+    height: 100%;
+    clear: right;
+
+    
+}
 .redbox{
     text-align: center;
     background-color: #E25A5A;
@@ -49,4 +58,9 @@
 .buttonback a {
 
     color: white;
+}
+
+/* removed padding for footer */
+.page-content {
+    padding-bottom: 0px !important;
 }
