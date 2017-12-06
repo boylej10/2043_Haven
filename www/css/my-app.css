@@ -75,21 +75,30 @@
 
 .map-responsive{
     position: relative;
-    padding-bottom: 75%; // This is the aspect ratio
-    height: 0;
+    
+    width: 100vw !important;
+    height: 95vh !important;
     overflow: hidden;
-    max-height: 100%;
+    
 }
 .map-responsive iframe{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100% !important;
-    height: 100% !important;
+    
 }
 
-#fullscreen{
+.fullscreen{
     position: absolute !important;
     width: 100% !important;
-    height: 100% !important;
+    height: 100vh !important;
+}
+
+.map-page{
+    position: relative;
+    /*padding-bottom: 100%; // This is the aspect ratio*/
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+    /*max-height: 100%;*/
 }
