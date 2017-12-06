@@ -1,0 +1,49 @@
+<head>
+
+    <script src="js/prettify.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwNL5yocg3-pnKOqIZNYQkYY49-nU9BEQ" type="text/javascript"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/my-app.css" />
+</head>
+
+<body>
+
+    <div id="map" class="map-responsive">hi</div>
+      
+    <!-- GMaps Library -->
+    <script src="js/gmaps.js"></script>
+      
+    <script>
+        var map;
+    $(document).ready(function(){
+      prettyPrint();
+      map = new GMaps({
+        div: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+
+      GMaps.geolocate({
+        success: function(position){
+          map.setCenter(position.coords.latitude, position.coords.longitude);
+        },
+        error: function(error){
+          alert('Geolocation failed: '+error.message);
+        },
+        not_supported: function(){
+          alert("Your browser does not support geolocation");
+        },
+        always: function(){
+          ("Done!");
+        }
+      });
+    });
+        
+        
+    </script>
+</body>

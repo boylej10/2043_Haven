@@ -34,6 +34,7 @@
     background-color: #E25A5A;
     height: 50%;
     clear:right;
+    opacity: 0%;
 
 }
 .vertical-align{
@@ -63,4 +64,32 @@
 /* removed padding for footer */
 .page-content {
     padding-bottom: 0px !important;
+}
+
+#cover-image {
+    height: auto;
+    opacity: 50%;
+}
+
+.pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
+.map-responsive{
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+    max-height: 100%;
+}
+.map-responsive iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#fullscreen{
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
 }
