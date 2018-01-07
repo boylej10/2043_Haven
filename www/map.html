@@ -24,13 +24,68 @@
       prettyPrint();
       map = new GMaps({
         div: '#map',
-        lat: -12.043333,
-        lng: -77.028333
+        lat: 52.407550, 
+        lng: -1.511339,
       });
+        
+        var path=[];
+      var p = [[52.4076373,-1.5099091],[52.409206, -1.509614],[52.410203, -1.508364],[52.409346, -1.503571],[52.406792, -1.504169],[52.406949, -1.507946]];
+      for(var i in p){
+        latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+        path.push(latlng);
+      }
+        
+        polygon = map.drawPolygon({
+            paths: path,
+            strokeColor: '#BBD8E9',
+            strokeOpacity: 1,
+            strokeWeight: 3,
+            fillColor: '#BBD8E9',
+            fillOpacity: 0.6
+        });
+        
+        var path=[];
+      var p = [[52.411604, -1.487456],[52.410118, -1.487630],[52.408600, -1.486750],[52.408852, -1.483877],[52.412026, -1.485358],];
+      for(var i in p){
+        latlng = new google.maps.LatLng(p[i][0], p[i][1]);
+        path.push(latlng);
+      }
+        
+        polygon = map.drawPolygon({
+            paths: path,
+            strokeColor: '#BBD8E9',
+            strokeOpacity: 1,
+            strokeWeight: 3,
+            fillColor: '#BBD8E9',
+            fillOpacity: 0.6
+        });
+        
+        map.addMarker({
+            lat: 52.4083048,
+            lng: -1.5072054,
+            
+            
+        });
+        
+        map.addMarker({
+            lat: 52.409809,
+            lng: -1.486205
+        })
 
       GMaps.geolocate({
         success: function(position){
           map.setCenter(position.coords.latitude, position.coords.longitude);
+          map.addMarker({
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+                 draggable: true,
+            fences: [polygon],
+            outside: function(marker, fence) {
+            alert('You are currently not near any Safe Havens. Head towards a blue are on the map to find your nearest Safe Haven.');
+            }
+             });
+
+         
         },
         error: function(error){
           alert('Geolocation failed: '+error.message);
@@ -41,6 +96,7 @@
         always: function(){
           ("Done!");
         }
+    
       });
     });
         
